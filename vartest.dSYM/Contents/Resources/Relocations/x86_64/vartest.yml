@@ -1,0 +1,12 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/angigyeom/Desktop/C:C++/balatro_optimized_score/balatro_2/vartest'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DB0, symSize: 0x50 }
+  - { offsetInCU: 0x4665, offset: 0x4665, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB7v160006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x70, symBinAddr: 0x100003E20, symSize: 0x50 }
+  - { offsetInCU: 0x46A5, offset: 0x46A5, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB7v160006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x140, symBinAddr: 0x100003EF0, symSize: 0x30 }
+  - { offsetInCU: 0x704C, offset: 0x704C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DB0, symSize: 0x50 }
+  - { offsetInCU: 0x712F, offset: 0x712F, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB7v160006EPFRS3_S4_E, symObjAddr: 0x50, symBinAddr: 0x100003E00, symSize: 0x20 }
+  - { offsetInCU: 0x7161, offset: 0x7161, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB7v160006Ec, symObjAddr: 0xC0, symBinAddr: 0x100003E70, symSize: 0x80 }
+  - { offsetInCU: 0x71CD, offset: 0x71CD, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB7v160006Ec, symObjAddr: 0x170, symBinAddr: 0x100003F20, symSize: 0x2B }
+...

@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Poker_Hands {
+class Poker_Hands { // 조커도 넣고, 스톤도 넣을 예정
 public:
   map<string, vector<int>> Poker_Ranks; // 조합 이름, 레벨, 칩, 배수 순서.
 
@@ -96,10 +96,34 @@ public:
   }
 };
 
-int FindHighestScore(map<string, vector<int>> &Poker_Ranks,
-                     map<string, map<string, int>> &Cards,
-                     vector<string> &MyCards) {
-  return 0; // code
+void FindHighestScoreOnNumber(
+    map<string, vector<int>> &Poker_Ranks, map<string, map<string, int>> &Cards,
+    vector<string> &MyCards) { // 숫자 중 가장 큰 조합을 뽑는 함수
+  vector<int> countNumberOnHand = {
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0}; // 이 벡터에다가 {0, ... A}까지의 숫자 카운트
+
+  for (const auto &card : MyCards) {
+    char rank = card[1];
+    int RankNumber;
+
+    if (card[1] == 'A') {
+      countNumberOnHand[14]++;
+    } else if (card[1] == 'K') {
+      countNumberOnHand[13]++;
+    } else if (card[1] == 'Q') {
+      countNumberOnHand[12]++;
+    } else if (card[1] == 'J') {
+      countNumberOnHand[11]++;
+    } else if (card[1] == '0') {
+      countNumberOnHand[10]++;
+    } else {
+      RankNumber = rank - '0';
+      // char to int 변환. foo = (int)bar 하면 안됨.
+      // ASCII로 바꾸는거라서 인덱스를 벗어날 수 있음.
+      countNumberOnHand[RankNumber]++;
+    }
+  }
 }
 
 int main() {
@@ -118,9 +142,6 @@ int main() {
     }
   }
 
-  for (auto i : trump.MyCards) { // TEST 함수
-    cout << i << endl;
-  }
-
+  FindHighestScoreOnNumber(pokerhands.Poker_Ranks, trump.Cards, trump.MyCards);
   return 0;
 }
