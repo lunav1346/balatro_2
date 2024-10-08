@@ -102,6 +102,7 @@ void FindHighestScoreOnNumber(
   vector<int> countNumberOnHand = {
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0}; // 이 벡터에다가 {0, ... A}까지의 숫자 카운트
+  // countNumberOnHand의 index는 [1]부터 시작.
 
   for (const auto &card : MyCards) {
     char rank = card[1];
@@ -124,6 +125,11 @@ void FindHighestScoreOnNumber(
       countNumberOnHand[RankNumber]++;
     }
   }
+  // 이제 Poker_Rank와 countNumberOnHand를 이용해 각각의 족보가 가능한지 확인.
+  // 확인하는 족보: 하이카드, 페어, 투페어, 트리플, 포카드
+  // 맨 마지막에 High_Card를 넣어야 함.
+  vector<int> NumberScore = {0, 0, 0, 0, 0};
+  // condition => NumberScore[i] = Rank * 칩의 개수
 }
 
 int main() {
